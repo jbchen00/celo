@@ -14,6 +14,7 @@ namespace RandomUserApi.Repository
         Task<UserEntity> GetUser(Guid userId);
         Task UpdateUser(UserEntity user);
         Task DeleteUser(Guid userId);
+        Task CreateUsers(IEnumerable<UserEntity> users);
     }
 
     public class UserRepository : IUserRepository
@@ -46,6 +47,12 @@ namespace RandomUserApi.Repository
         {
             var toDelete = await _context.UserEntities.FirstOrDefaultAsync(u => u.Id.Equals(userId));
             _context.UserEntities.Remove(toDelete);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task CreateUsers(IEnumerable<UserEntity> users)
+        {
+            await _context.UserEntities.AddRangeAsync(users);
             await _context.SaveChangesAsync();
         }
     }

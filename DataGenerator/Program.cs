@@ -48,8 +48,9 @@ namespace DataGenerator
             var dbContextOptionsBuilder =
                 new DbContextOptionsBuilder<MyDbContext>().UseSqlServer(connectionString);
             var context = new MyDbContext(dbContextOptionsBuilder.Options);
-            var userRepo = new UserRepository(context);
             var userEntity = result.Users.Select(Map);
+            var userRepo = new UserRepository(context);
+            userRepo.CreateUsers(userEntity);
         }
 
         private static UserEntity Map(RUser user)
