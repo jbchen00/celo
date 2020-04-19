@@ -12,6 +12,6 @@ namespace RandomUserApi.Data.Entities
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; }
-        public virtual ProfileImageEntity ProfileImage { get; set; }
+        public ProfileImageEntity ProfileImage { get; set; }
     }
 }
