@@ -6,12 +6,12 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Data;
+using Data.Entities;
+using Data.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using RandomUserApi.Data;
-using RandomUserApi.Data.Entities;
-using RandomUserApi.Data.Repository;
 
 namespace DataGenerator
 {

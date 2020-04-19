@@ -1,12 +1,13 @@
+using Data;
+using Data.Repository;
+using Integration;
+using Integration.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RandomUserApi.Data;
-using RandomUserApi.Data.Repository;
-using RandomUserApi.Service;
 
 namespace RandomUserApi
 {

@@ -1,0 +1,8 @@
+C:\Users\Joe Chen\Documents\celo\Data\obj\Debug\netcoreapp3.1\Data.csprojAssemblyReference.cache
+C:\Users\Joe Chen\Documents\celo\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+C:\Users\Joe Chen\Documents\celo\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\Users\Joe Chen\Documents\celo\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+C:\Users\Joe Chen\Documents\celo\Data\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\Joe Chen\Documents\celo\Data\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\Joe Chen\Documents\celo\Data\obj\Debug\netcoreapp3.1\Data.dll
+C:\Users\Joe Chen\Documents\celo\Data\obj\Debug\netcoreapp3.1\Data.pdb

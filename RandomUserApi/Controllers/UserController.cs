@@ -3,8 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RandomUserApi.Domain;
-using RandomUserApi.Service;
+using Domain;
+using Domain.Model;
+using Integration.Service;
 
 namespace RandomUserApi.Controllers
 {
