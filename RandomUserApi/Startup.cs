@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RandomUserApi.Data;
-using RandomUserApi.Repository;
+using RandomUserApi.Data.Repository;
 using RandomUserApi.Service;
 
 namespace RandomUserApi

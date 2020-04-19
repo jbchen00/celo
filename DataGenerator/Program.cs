@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using RandomUserApi.Data;
 using RandomUserApi.Data.Entities;
-using RandomUserApi.Repository;
+using RandomUserApi.Data.Repository;
 
 namespace DataGenerator
 {

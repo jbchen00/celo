@@ -6,8 +6,8 @@ using Autofac.Extras.Moq;
 using AutoMapper;
 using Moq;
 using RandomUserApi.Data.Entities;
+using RandomUserApi.Data.Repository;
 using RandomUserApi.Domain;
-using RandomUserApi.Repository;
 using RandomUserApi.Service;
 using Xunit;
 

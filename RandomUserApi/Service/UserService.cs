@@ -4,8 +4,8 @@ using System.Data.SqlTypes;
 using System.Threading.Tasks;
 using AutoMapper;
 using RandomUserApi.Data.Entities;
+using RandomUserApi.Data.Repository;
 using RandomUserApi.Domain;
-using RandomUserApi.Repository;
 
 namespace RandomUserApi.Service
 {
