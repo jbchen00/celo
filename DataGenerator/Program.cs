@@ -46,8 +46,7 @@ namespace DataGenerator
 
             var connectionString = Configuration.GetConnectionString("Database");
             var dbContextOptionsBuilder =
-                new DbContextOptionsBuilder<MyDbContext>().UseSqlServer(connectionString);
-            dbContextOptionsBuilder.EnableSensitiveDataLogging();
+                new DbContextOptionsBuilder<MyDbContext>().EnableSensitiveDataLogging().UseSqlServer(connectionString);
             var context = new MyDbContext(dbContextOptionsBuilder.Options);
             var userEntity = result.Users.Select(Map);
             var userRepo = new UserRepository(context);
@@ -64,7 +63,7 @@ namespace DataGenerator
                 Email = user.Email,
                 PhoneNumber = user.Phone,
                 DateOfBirth = user.DateOfBirth.Date,
-                ProfileImages = new ProfileImageEntity()
+                ProfileImage = new ProfileImageEntity()
                 {
                     Thumbnail = user.Picture.Thumbnail,
                     Large = user.Picture.Large
