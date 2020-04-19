@@ -1,11 +1,13 @@
-﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using RandomUserApi.Data.Entities;
 
 namespace RandomUserApi.Data
 {
     public class MyDbContext : DbContext
     {
+        public virtual DbSet<UserEntity> UserEntities { get; set; }
+        public virtual DbSet<ProfileImageEntity> ProfileImageEntities { get; set; }
+
         public MyDbContext(DbContextOptions<MyDbContext> options)
             : base(options)
         {
@@ -20,10 +22,7 @@ namespace RandomUserApi.Data
                     .WithOne(e => e.User)
                     .IsRequired();
             });
-            modelBuilder.Entity<ProfileImageEntity>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-            });
+            modelBuilder.Entity<ProfileImageEntity>(entity => { entity.HasKey(e => e.Id); });
         }
     }
 }
