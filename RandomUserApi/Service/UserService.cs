@@ -55,7 +55,7 @@ namespace RandomUserApi.Service
             {
                 await _userRepository.DeleteUser(userId);
             }
-            catch (ArgumentNullException ex)
+            catch (ArgumentNullException)
             {
             }
         }

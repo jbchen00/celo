@@ -29,7 +29,7 @@ namespace RandomUserApi.Repository
         public Task<List<UserEntity>> GetUsers(int limit, int skip, string name)
         {
             return _context.UserEntities
-                .Include(e=>e.ProfileImage)
+                .Include(e => e.ProfileImage)
                 .Where(u =>
                     string.IsNullOrWhiteSpace(name) ||
                     EF.Functions.Like(u.FirstName, $"%{name}%") ||
@@ -41,7 +41,9 @@ namespace RandomUserApi.Repository
 
         public Task<UserEntity> GetUser(Guid userId)
         {
-            return _context.UserEntities.FirstOrDefaultAsync(u => u.Id.Equals(userId));
+            return _context.UserEntities
+                .Include(e => e.ProfileImage)
+                .FirstOrDefaultAsync(u => u.Id.Equals(userId));
         }
 
         public async Task UpdateUser(UserEntity user)
