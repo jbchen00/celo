@@ -46,7 +46,7 @@ namespace DataGenerator
         private static async Task InsertData()
         {
             var client = new HttpClient();
-            var response = await client.GetAsync("https://randomuser.me/api/");
+            var response = await client.GetAsync("https://randomuser.me/api/?results=5000");
             var body = await response.Content.ReadAsStringAsync();
             var result = JsonSerializer.Deserialize<RandomUserResponse>(body,
                 new JsonSerializerOptions()
