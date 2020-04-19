@@ -5,6 +5,7 @@ using AutoMapper;
 using Data.Entities;
 using Data.Repository;
 using Domain;
+using Domain.Model;
 using Integration.Service;
 using Moq;
 using Xunit;

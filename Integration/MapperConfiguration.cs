@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Data.Entities;
 using Domain;
+using Domain.Model;
 
 namespace Integration
 {

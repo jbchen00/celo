@@ -4,13 +4,13 @@
 ### Adding a new migration
 
 ```bat
-dotnet ef migrations add MigrationName --verbose --startup-project .\RandomUserApi
+dotnet ef migrations add MigrationName --verbose --project .\Data --startup-project .\RandomUserApi
 ```
 
 ### Applying migration
 
 ```bat
-dotnet ef database update --project ./RandomUserApi
+dotnet ef database update --project .\Data --startup-project .\RandomUserApi
 ```
 
 ### Update dotnet ef
