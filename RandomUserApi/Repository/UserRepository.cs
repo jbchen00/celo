@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using RandomUserApi.Data.Entities;
 using RandomUserApi.Domain;
-using RandomUserApi.Entities;
 
 namespace RandomUserApi.Repository
 {

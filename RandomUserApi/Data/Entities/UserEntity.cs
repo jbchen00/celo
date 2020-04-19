@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RandomUserApi.Entities
+namespace RandomUserApi.Data.Entities
 {
     public class UserEntity
     {

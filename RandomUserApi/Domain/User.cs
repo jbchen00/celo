@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using RandomUserApi.Entities;
 
 namespace RandomUserApi.Domain
 {

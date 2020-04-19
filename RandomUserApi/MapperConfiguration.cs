@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using RandomUserApi.Data.Entities;
 using RandomUserApi.Domain;
-using RandomUserApi.Entities;
 
 namespace RandomUserApi
 {

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using RandomUserApi.Data.Entities;
 using RandomUserApi.Domain;
-using RandomUserApi.Entities;
 using RandomUserApi.Repository;
 
 namespace RandomUserApi.Service
