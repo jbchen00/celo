@@ -8,6 +8,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using RandomUserApi.Data;
 using RandomUserApi.Data.Entities;
 using RandomUserApi.Repository;
@@ -28,6 +29,15 @@ namespace DataGenerator
             }
         }
 
+        public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+            {
+                builder.AddFilter("Microsoft", LogLevel.Warning)
+                    .AddFilter("System", LogLevel.Warning)
+                    .AddFilter("SampleApp.Program", LogLevel.Debug)
+                    .AddConsole();
+            }
+        );
+
         static void Main(string[] args)
         {
             InsertData().GetAwaiter().GetResult();
@@ -46,7 +56,10 @@ namespace DataGenerator
 
             var connectionString = Configuration.GetConnectionString("Database");
             var dbContextOptionsBuilder =
-                new DbContextOptionsBuilder<MyDbContext>().EnableSensitiveDataLogging().UseSqlServer(connectionString);
+                new DbContextOptionsBuilder<MyDbContext>()
+                    .UseLoggerFactory(loggerFactory)
+                    .EnableSensitiveDataLogging()
+                    .UseSqlServer(connectionString);
             var context = new MyDbContext(dbContextOptionsBuilder.Options);
             var userEntity = result.Users.Select(Map);
             var userRepo = new UserRepository(context);
