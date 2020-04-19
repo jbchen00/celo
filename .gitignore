@@ -1,4 +1,14 @@
 ﻿/.idea/
 /celo.sln.DotSettings.user
-**/bin/
-**/obj/
+/Domain/obj/
+/Domain/bin/
+/DataGenerator/obj/
+/DataGenerator/bin/
+/Data/bin/
+/Data/obj/
+/Integration/bin/
+/Integration/obj/
+/RandomUserApi/bin/
+/RandomUserApi/obj/
+/UnitTests/bin/
+/UnitTests/obj/
