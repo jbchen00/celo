@@ -2,3 +2,5 @@
 /RandomUserApi/obj/
 /RandomUserApi/bin/
 /celo.sln.DotSettings.user
+/DataGenerator/obj/
+/DataGenerator/bin/Debug/netcoreapp3.1/

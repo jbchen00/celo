@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomUserApi", "RandomUserApi\RandomUserApi.csproj", "{83A6B2ED-B205-4065-990D-67BC4F8CBB01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGenerator", "DataGenerator\DataGenerator.csproj", "{254E7016-756C-40E8-A61F-713D04C35D63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{83A6B2ED-B205-4065-990D-67BC4F8CBB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A6B2ED-B205-4065-990D-67BC4F8CBB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A6B2ED-B205-4065-990D-67BC4F8CBB01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{254E7016-756C-40E8-A61F-713D04C35D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254E7016-756C-40E8-A61F-713D04C35D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254E7016-756C-40E8-A61F-713D04C35D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254E7016-756C-40E8-A61F-713D04C35D63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

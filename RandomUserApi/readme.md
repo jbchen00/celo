@@ -4,7 +4,7 @@
 ### Adding a new migration
 
 ```bat
-dotnet ef migrations add init --verbose --startup-project .\RandomUserApi
+dotnet ef migrations add MigrationName --verbose --startup-project .\RandomUserApi
 ```
 
 ### Applying migration
