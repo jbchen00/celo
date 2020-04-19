@@ -1,0 +1,13 @@
+C:\Users\Joe Chen\Documents\celo\Integration\bin\Debug\netcoreapp3.1\Integration.deps.json
+C:\Users\Joe Chen\Documents\celo\Integration\bin\Debug\netcoreapp3.1\Integration.dll
+C:\Users\Joe Chen\Documents\celo\Integration\bin\Debug\netcoreapp3.1\Integration.pdb
+C:\Users\Joe Chen\Documents\celo\Integration\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\Joe Chen\Documents\celo\Integration\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Joe Chen\Documents\celo\Integration\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\Joe Chen\Documents\celo\Integration\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Joe Chen\Documents\celo\Integration\obj\Debug\netcoreapp3.1\Integration.csprojAssemblyReference.cache
+C:\Users\Joe Chen\Documents\celo\Integration\obj\Debug\netcoreapp3.1\Integration.AssemblyInfoInputs.cache
+C:\Users\Joe Chen\Documents\celo\Integration\obj\Debug\netcoreapp3.1\Integration.AssemblyInfo.cs
+C:\Users\Joe Chen\Documents\celo\Integration\obj\Debug\netcoreapp3.1\Integration.csproj.CopyComplete
+C:\Users\Joe Chen\Documents\celo\Integration\obj\Debug\netcoreapp3.1\Integration.dll
+C:\Users\Joe Chen\Documents\celo\Integration\obj\Debug\netcoreapp3.1\Integration.pdb
