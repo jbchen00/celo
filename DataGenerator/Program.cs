@@ -47,10 +47,11 @@ namespace DataGenerator
             var connectionString = Configuration.GetConnectionString("Database");
             var dbContextOptionsBuilder =
                 new DbContextOptionsBuilder<MyDbContext>().UseSqlServer(connectionString);
+            dbContextOptionsBuilder.EnableSensitiveDataLogging();
             var context = new MyDbContext(dbContextOptionsBuilder.Options);
             var userEntity = result.Users.Select(Map);
             var userRepo = new UserRepository(context);
-            userRepo.CreateUsers(userEntity);
+            await userRepo.CreateUsers(userEntity);
         }
 
         private static UserEntity Map(RUser user)

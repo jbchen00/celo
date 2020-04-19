@@ -18,11 +18,18 @@ namespace RandomUserApi.Data
             modelBuilder.Entity<UserEntity>(entity =>
             {
                 entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id).HasDefaultValueSql("NEWSEQUENTIALID()");
                 entity.HasOne<ProfileImageEntity>()
                     .WithOne(e => e.User)
-                    .IsRequired();
+                    .HasForeignKey<UserEntity>(u => u.Id)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired(false);
             });
-            modelBuilder.Entity<ProfileImageEntity>(entity => { entity.HasKey(e => e.Id); });
+            modelBuilder.Entity<ProfileImageEntity>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id).HasDefaultValueSql("NEWSEQUENTIALID()");
+            });
         }
     }
 }
