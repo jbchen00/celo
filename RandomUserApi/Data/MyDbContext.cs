@@ -21,7 +21,7 @@ namespace RandomUserApi.Data
                 entity.Property(e => e.Id).HasDefaultValueSql("NEWSEQUENTIALID()");
                 entity.HasOne<ProfileImageEntity>()
                     .WithOne(e => e.User)
-                    .HasForeignKey<UserEntity>(u => u.Id)
+                    .HasForeignKey<ProfileImageEntity>(u => u.UserId)
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired(false);
             });
@@ -29,6 +29,7 @@ namespace RandomUserApi.Data
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Id).HasDefaultValueSql("NEWSEQUENTIALID()");
+                entity.Property(e => e.UserId).ValueGeneratedNever();
             });
         }
     }
