@@ -28,7 +28,9 @@ namespace RandomUserApi.Repository
 
         public Task<List<UserEntity>> GetUsers(int limit, int skip, string name)
         {
-            return _context.UserEntities.Where(u =>
+            return _context.UserEntities
+                .Include(e=>e.ProfileImage)
+                .Where(u =>
                     string.IsNullOrWhiteSpace(name) ||
                     EF.Functions.Like(u.FirstName, $"%{name}%") ||
                     EF.Functions.Like(u.LastName, $"%{name}%"))

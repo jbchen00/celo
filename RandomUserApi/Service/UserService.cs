@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Threading.Tasks;
 using AutoMapper;
 using RandomUserApi.Data.Entities;
@@ -50,7 +51,13 @@ namespace RandomUserApi.Service
         public async Task DeleteUser(Guid userId)
         {
             if (userId.Equals(Guid.Empty)) throw new ArgumentNullException(nameof(userId));
-            await _userRepository.DeleteUser(userId);
+            try
+            {
+                await _userRepository.DeleteUser(userId);
+            }
+            catch (ArgumentNullException ex)
+            {
+            }
         }
     }
 }
