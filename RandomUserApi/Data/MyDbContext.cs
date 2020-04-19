@@ -17,7 +17,8 @@ namespace RandomUserApi.Data
             {
                 entity.HasKey(e => e.Id);
                 entity.HasMany<ProfileImageEntity>()
-                    .WithOne(e => e.User);
+                    .WithOne(e => e.User)
+                    .IsRequired();
             });
             modelBuilder.Entity<ProfileImageEntity>(entity =>
             {
