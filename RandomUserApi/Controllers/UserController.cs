@@ -25,8 +25,7 @@ namespace RandomUserApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] string name, [FromQuery] Pagination pagination)
         {
-            pagination ??= new Pagination();
-            return Ok(await _userService.GetUsers(pagination.Limit, _defaultPagination.Skip, name));
+            return Ok(await _userService.GetUsers(name, pagination.Limit, pagination.Skip));
         }
 
         [HttpGet("{userId}")]

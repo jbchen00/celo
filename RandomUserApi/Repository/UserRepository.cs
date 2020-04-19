@@ -16,23 +16,25 @@ namespace RandomUserApi.Repository
 
     public class UserRepository : IUserRepository
     {
-        public Task<IEnumerable<UserEntity>> GetUsers(int limit, int skip, string name)
+        public async Task<IEnumerable<UserEntity>> GetUsers(int limit, int skip, string name)
         {
-            return new Task<IEnumerable<UserEntity>>(() => new List<UserEntity>()
-                {new UserEntity(), new UserEntity(), new UserEntity(), new UserEntity()});
+            var test = new List<UserEntity>()
+                {new UserEntity(), new UserEntity(), new UserEntity(), new UserEntity()};
+
+            return test;
         }
 
-        public Task<UserEntity> GetUser(Guid userId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateUser(UserEntity user)
+        public async Task<UserEntity> GetUser(Guid userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteUser(Guid userId)
+        public async Task UpdateUser(UserEntity user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task DeleteUser(Guid userId)
         {
             throw new NotImplementedException();
         }

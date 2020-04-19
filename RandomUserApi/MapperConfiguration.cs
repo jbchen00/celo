@@ -21,5 +21,7 @@ namespace RandomUserApi
             cfg.CreateMap<TypeA, TypeB>();
             cfg.CreateMap<TypeB, TypeA>();
         }
+        
+        
     }
 }
